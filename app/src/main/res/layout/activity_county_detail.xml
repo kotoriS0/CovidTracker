@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView_countyDetail_county"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="TextView"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView_countyDetail_lastDateUpdatedLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_countyDetail_cdcTransmissionLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/textView_countyDetail_cdcTransmissionLevelLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textView_countyDetail_cdcTransmissionLevelLabel" />
+
+    <TextView
+        android:id="@+id/textView_countyDetail_cdcTransmissionLevelLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="CDC Transmission Level"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView_countyDetail_county"
+        app:layout_constraintTop_toBottomOf="@+id/textView_countyDetail_county" />
+
+    <TextView
+        android:id="@+id/textView_countyDetail_lastDateUpdated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/textView_countyDetail_lastDateUpdatedLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textView_countyDetail_lastDateUpdatedLabel" />
+
+    <TextView
+        android:id="@+id/textView_countyDetail_lastDateUpdatedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="Last Updated"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView_countyDetail_county" />
+
+    <TextView
+        android:id="@+id/textView_countyDetail_casesLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="21dp"
+        android:text="Cases"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView_countyDetail_newCasesLabel"
+        app:layout_constraintStart_toStartOf="@+id/textView_countyDetail_cdcTransmissionLevel"
+        app:layout_constraintTop_toBottomOf="@+id/textView_countyDetail_cdcTransmissionLevel" />
+
+    <TextView
+        android:id="@+id/textView_countyDetail_cases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/textView_countyDetail_casesLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textView_countyDetail_casesLabel" />
+
+    <TextView
+        android:id="@+id/textView_countyDetail_newCasesLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="New Cases"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView_countyDetail_casesLabel" />
+
+    <TextView
+        android:id="@+id/textView_countyDetail_newCases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="238dp"
+        tools:layout_editor_absoluteY="232dp" />
+
+    <TextView
+        android:id="@+id/textView_countyDetail_testPositivityRatioLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test Positivity Ratio"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="313dp" />
+
+    <TextView
+        android:id="@+id/textView_countyDetail_testPositivityRatio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="344dp" />
+
+    <TextView
+        android:id="@+id/textView_countyDetail_newCasesper100kLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Cases Per 100k People"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="203dp"
+        tools:layout_editor_absoluteY="313dp" />
+
+    <TextView
+        android:id="@+id/textView_countyDetail_newCasesPer100k"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="230dp"
+        tools:layout_editor_absoluteY="340dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

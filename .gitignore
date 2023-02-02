@@ -1,4 +1,4 @@
-*.iml
+32*.iml
 .gradle
 /local.properties
 /.idea/caches
@@ -13,3 +13,4 @@
 .externalNativeBuild
 .cxx
 local.properties
+/app/src/main/java/com/example/covidtracker/Constants.kt
