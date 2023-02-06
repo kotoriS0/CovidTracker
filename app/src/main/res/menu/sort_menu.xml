@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menuItem_name"
+        android:title="@string/name" />
+    <item android:id="@+id/menuItem_weeklyCasesPer100k"
+        android:title="@string/weekly_cases_per_100k" ></item>
+    <item
+        android:id="@+id/menuItem_help"
+        android:icon="@drawable/ic_baseline_question_mark_24"
+        android:title="Item"
+        app:showAsAction="always" />
+</menu>

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
+import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.covidtracker.databinding.ActivityCountyListBinding
 import retrofit2.Call
@@ -43,8 +44,8 @@ class CountyListActivity : AppCompatActivity() {
                 call: Call<List<CountyData>>,
                 response: Response<List<CountyData>>
             ) {
-                Log.d(TAG, "onResponse: ${response.body()}")
-                adapter = CountyAdapter(response.body())
+                //Log.d(TAG, "onResponse: ${response.body()}")
+                adapter = CountyAdapter(response.body()?.sortedBy { it.county })
                 binding.recyclerViewCountyList.adapter = adapter
                 binding.recyclerViewCountyList.layoutManager = LinearLayoutManager(this@CountyListActivity)
 
@@ -54,7 +55,30 @@ class CountyListActivity : AppCompatActivity() {
                 Log.d(TAG, "onFailure: ${t.message}")
             }
         })
+    }
 
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater : MenuInflater = menuInflater
+        inflater.inflate(R.menu.sort_menu, menu)
+        return true
+    }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.menuItem_name -> {
+                adapter.dataSet = adapter.dataSet?.sortedBy { it.county }
+                adapter.notifyDataSetChanged()
+                true
+            }
+            R.id.menuItem_weeklyCasesPer100k -> {
+                adapter.dataSet = adapter.dataSet?.sortedByDescending { it.metrics.weeklyNewCasesPer100k}
+                adapter.notifyDataSetChanged()
+                true
+            }
+            R.id.menuItem_help -> {
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }

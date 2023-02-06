@@ -3,11 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_baseline_gpp_maybe_24.xml" value="0.1765" />
+        <entry key="app/src/main/res/drawable/ic_baseline_question_mark_24.xml" value="0.1035" />
+        <entry key="app/src/main/res/drawable/ic_baseline_warning_24.xml" value="0.1765" />
+        <entry key="app/src/main/res/drawable/ic_baseline_warning_amber_24.xml" value="0.1765" />
+        <entry key="app/src/main/res/drawable/info.xml" value="0.1035" />
         <entry key="app/src/main/res/layout/activity_county_detail.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_county_list.xml" value="0.1651469098277609" />
         <entry key="app/src/main/res/layout/county_detail.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_county.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_county_data.xml" value="0.375" />
+        <entry key="app/src/main/res/menu/sort_menu.xml" value="0.335" />
       </map>
     </option>
   </component>

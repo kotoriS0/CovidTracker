@@ -1,5 +1,7 @@
 package com.example.covidtracker
 
+import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -39,10 +41,15 @@ class CountyAdapter(var dataSet: List<CountyData>?) : RecyclerView.Adapter<Count
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         val county = dataSet?.get(position)
         viewHolder.textViewCounty.text = county?.county
+        //viewHolder.textViewCounty.setCompoundDrawables(Drawable())
         viewHolder.textViewLastUpdated.text = county?.lastUpdatedDate
         viewHolder.textViewPer100k.text = county?.metrics?.weeklyNewCasesPer100k.toString()
         viewHolder.layout.setOnClickListener {
-            Toast.makeText(it.context, county.toString(), Toast.LENGTH_SHORT).show()
+            //Toast.makeText(it.context, county.toString(), Toast.LENGTH_SHORT).show()
+            val detailIntent = Intent(it.context, CountyDetailActivity::class.java)
+            detailIntent.putExtra(EXTRA_COUNTY, county)
+
+            it.context.startActivity(detailIntent)
         }
     }
 
