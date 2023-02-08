@@ -20,7 +20,8 @@ class CountyAdapter(var dataSet: List<CountyData>?) : RecyclerView.Adapter<Count
         val EXTRA_COUNTY = "county"
         val RED = Color.parseColor("#e04c41")
         val YELLOW = Color.parseColor("#e8dd46")
-        val BLUE = Color.parseColor("#56a9d6")
+        val ORANGE = Color.parseColor("#ecaa27")
+        val BLUE = Color.parseColor("#3699ce")
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -51,15 +52,19 @@ class CountyAdapter(var dataSet: List<CountyData>?) : RecyclerView.Adapter<Count
         when(county?.cdcTransmissionLevel) {
             0 -> { viewHolder.textViewCounty.setTextColor(BLUE)
                 viewHolder.textViewCounty.setCompoundDrawablesRelativeWithIntrinsicBounds(
+                    null,null,null,null)
+            }
+            1 -> { viewHolder.textViewCounty.setTextColor(YELLOW)
+                viewHolder.textViewCounty.setCompoundDrawablesRelativeWithIntrinsicBounds(
                     AppCompatResources.getDrawable(context , R.drawable.ic_baseline_gpp_maybe_24),
                     null,null,null)
             }
-            1 -> { viewHolder.textViewCounty.setTextColor(YELLOW)
+            2 -> { viewHolder.textViewCounty.setTextColor(ORANGE)
                 viewHolder.textViewCounty.setCompoundDrawablesRelativeWithIntrinsicBounds(
                     AppCompatResources.getDrawable(context , R.drawable.ic_baseline_warning_amber_24),
                     null,null,null)
             }
-            2 -> { viewHolder.textViewCounty.setTextColor(RED)
+            3 -> { viewHolder.textViewCounty.setTextColor(RED)
                 viewHolder.textViewCounty.setCompoundDrawablesRelativeWithIntrinsicBounds(
                     AppCompatResources.getDrawable(context , R.drawable.ic_baseline_warning_24),
                     null,null,null)
