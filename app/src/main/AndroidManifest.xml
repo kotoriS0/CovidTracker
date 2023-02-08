@@ -16,6 +16,11 @@
         android:theme="@style/Theme.CovidTracker"
         tools:targetApi="31">
         <activity
+            android:name=".InfoActivity"
+            android:exported="false"
+            android:label="@string/title_activity_info"
+            android:theme="@style/Theme.CovidTracker.NoActionBar" />
+        <activity
             android:name=".CountyListActivity"
             android:exported="true">
             <intent-filter>
@@ -24,7 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CountyDetailActivity"/>
+        <activity android:name=".CountyDetailActivity" />
     </application>
 
 </manifest>

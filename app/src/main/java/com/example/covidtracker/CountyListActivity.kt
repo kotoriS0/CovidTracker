@@ -1,5 +1,7 @@
 package com.example.covidtracker
 
+import android.content.Intent
+import android.icu.text.IDNA
 import android.net.wifi.rtt.CivicLocationKeys.STATE
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +9,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.covidtracker.databinding.ActivityCountyListBinding
 import retrofit2.Call
@@ -76,6 +79,11 @@ class CountyListActivity : AppCompatActivity() {
                 true
             }
             R.id.menuItem_help -> {
+                /* Toast.makeText(this, "Red: High Transmission\nOrange: Substantial Transmission\nYellow: " +
+                        "Moderate Transmission\nBlue: Low Transmission\nGrey: Unknown\n\nThe number represents " +
+                        "the weekly case count per 100k people in the county.", Toast.LENGTH_LONG).show()*/
+                val detailIntent = Intent(this, InfoActivity::class.java)
+                this.startActivity(detailIntent)
                 true
             }
             else -> super.onOptionsItemSelected(item)
