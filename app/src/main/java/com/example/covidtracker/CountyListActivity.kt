@@ -1,5 +1,6 @@
 package com.example.covidtracker
 
+import android.app.ProgressDialog.show
 import android.content.Intent
 import android.icu.text.IDNA
 import android.net.wifi.rtt.CivicLocationKeys.STATE
@@ -79,11 +80,8 @@ class CountyListActivity : AppCompatActivity() {
                 true
             }
             R.id.menuItem_help -> {
-                /* Toast.makeText(this, "Red: High Transmission\nOrange: Substantial Transmission\nYellow: " +
-                        "Moderate Transmission\nBlue: Low Transmission\nGrey: Unknown\n\nThe number represents " +
-                        "the weekly case count per 100k people in the county.", Toast.LENGTH_LONG).show()*/
-                val detailIntent = Intent(this, InfoActivity::class.java)
-                this.startActivity(detailIntent)
+                val infoDialog = InfoDialog()
+                infoDialog.show(supportFragmentManager, "info")
                 true
             }
             else -> super.onOptionsItemSelected(item)
